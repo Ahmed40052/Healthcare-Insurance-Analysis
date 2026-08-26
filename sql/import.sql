@@ -18,7 +18,7 @@ GO
 -- D:\NTI_Tasks_Data_Analysis\Project\healthcare-insurance-analysis\data\processed\insurance_clean.csv
 
 BULK INSERT dbo.Insurance
-FROM 'C:\Users\ebtih\OneDrive\Desktop\git\healthcare project\Healthcare-Insurance-Analysis\data\processed\insurance_clean.csv'
+FROM 'D:\NTI_Tasks_Data_Analysis\Project\healthcare-insurance-analysis\data\processed\insurance_clean.csv'
 WITH (
     FIRSTROW = 2,
     FIELDTERMINATOR = ',',
