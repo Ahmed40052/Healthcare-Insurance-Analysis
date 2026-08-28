@@ -27,8 +27,7 @@ We compared average charges and patient counts by region using Excel and Python.
 | Northeast | $13,406.38 | 324 |
 | Northwest | $12,450.84 | 324 |
 | Southwest | $12,346.94 | 325 |
-
-![Average charges by region](https://raw.githubusercontent.com/Ahmed40052/Healthcare-Insurance-Analysis/main/reports/readme_charts/region_charges.jpg)
+<img width="1860" height="1024" alt="Q2_avg_charges_by_region" src="https://github.com/user-attachments/assets/a64c34c7-218f-477d-92a0-e989288b6671" />
 
 **Conclusion:** The Southeast is the most expensive region, but the difference is better explained by its risk-factor mix than by geography alone.
 
@@ -43,10 +42,33 @@ The top 10% group has a very clear profile:
 
 ```sql
 SELECT TOP 10 PERCENT
-    age, sex, bmi, children, smoker, region, charges
+    age,
+    sex,
+    bmi,
+    children,
+    smoker,
+    region,
+    charges
 FROM Insurance_clean
 ORDER BY charges DESC;
+----common characteristics
+SELECT 
+    smoker,
+    AVG(age) AS avg_age,
+    AVG(bmi) AS avg_bmi,
+    AVG(children) AS avg_children,
+    COUNT(*) AS patients
+FROM (
+    SELECT TOP 10 PERCENT
+        age, sex, bmi, children, smoker, charges
+    FROM Insurance_clean
+    ORDER BY charges DESC
+) AS Top10
+GROUP BY smoker;
 ```
+
+<img width="2036" height="1323" alt="Q3_top10_charges" src="https://github.com/user-attachments/assets/40844d9c-cd15-4c9d-b06f-4361a70973b2" />
+
 
 **Conclusion:** The most expensive patients are identifiable high-risk cases, mainly smokers with elevated BMI. This segment should be prioritized for prevention and risk monitoring.
 
