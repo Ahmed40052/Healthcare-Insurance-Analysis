@@ -28,7 +28,7 @@ We compared average charges and patient counts by region using Excel and Python.
 | Northwest | $12,450.84 | 324 |
 | Southwest | $12,346.94 | 325 |
 
-![Average charges by region](reports/readme_charts/region_charges.jpg)
+![Average charges by region](https://raw.githubusercontent.com/Ahmed40052/Healthcare-Insurance-Analysis/main/reports/readme_charts/region_charges.jpg)
 
 **Conclusion:** The Southeast is the most expensive region, but the difference is better explained by its risk-factor mix than by geography alone.
 
@@ -63,7 +63,7 @@ ORDER BY charges DESC;
 | Overweight | $8,226.09 | $22,491.18 | x2.7 |
 | **Obese** | **$8,866.16** | **$41,692.81** | **x4.7** |
 
-![BMI category versus average charges](reports/readme_charts/bmi_categories.png)
+![BMI category versus average charges](https://raw.githubusercontent.com/Ahmed40052/Healthcare-Insurance-Analysis/main/reports/readme_charts/bmi_categories.png)
 
 **Conclusion:** BMI alone has a limited effect, but obese smokers are by far the most expensive group.
 
@@ -71,7 +71,7 @@ ORDER BY charges DESC;
 
 Yes. The Southeast has the highest smoker rate at approximately **25%**, compared with approximately **17.8%–20.7%** in the other regions. It is also the region with the highest average charges.
 
-![Average charges versus smoker rate by region](reports/readme_charts/region_smoker.png)
+![Average charges versus smoker rate by region](https://raw.githubusercontent.com/Ahmed40052/Healthcare-Insurance-Analysis/main/reports/readme_charts/region_smoker.png)
 
 **Conclusion:** The regional cost gap is strongly connected to smoker mix.
 
@@ -84,7 +84,7 @@ Yes. The Southeast has the highest smoker rate at approximately **25%**, compare
 | **Southeast** | **33.36** |
 | Southwest | 30.60 |
 
-![Average BMI by region](reports/readme_charts/bmi_region.png)
+![Average BMI by region](https://raw.githubusercontent.com/Ahmed40052/Healthcare-Insurance-Analysis/main/reports/readme_charts/bmi_region.png)
 
 **Conclusion:** The Southeast is the clearest double-risk region because it combines above-average BMI with above-average charges.
 
@@ -121,7 +121,7 @@ ORDER BY smoker, region, children;
 | 50–59 | $16,495.23 |
 | 60+ | **$21,248.02** |
 
-![Average charges by age group](reports/readme_charts/age.png)
+![Average charges by age group](https://raw.githubusercontent.com/Ahmed40052/Healthcare-Insurance-Analysis/main/reports/readme_charts/age.png)
 
 **Conclusion:** Charges rise gradually with age. Smoking remains the stronger explanation for the largest cost jumps.
 
@@ -131,9 +131,30 @@ ORDER BY smoker, region, children;
 - Raw female average: **$12,569.58**
 - After controlling for smoking, the apparent gender difference disappears.
 
-![Average charges by gender and smoker status](reports/readme_charts/gender.png)
+![Average charges by gender and smoker status](https://raw.githubusercontent.com/Ahmed40052/Healthcare-Insurance-Analysis/main/reports/readme_charts/gender.png)
 
 **Conclusion:** The raw gender difference is mainly caused by different smoking-rate distributions, not gender itself.
+
+---
+
+## Presenter 4: Power BI Dashboard
+
+The Power BI dashboard brings the eight analysis questions together in one visual management view. It lets the audience compare regional charges, smoker status, BMI, age, gender, and high-cost patients without moving between separate reports.
+
+### Dashboard walkthrough
+
+1. **Headline KPIs:** total patients, average charges, and the overall cost level.
+2. **Regional comparison:** Southeast appears as the highest-charge region.
+3. **Smoking analysis:** the dashboard shows the large gap between smokers and non-smokers.
+4. **BMI analysis:** the obese-smoker segment is visible as the highest-risk combination.
+5. **Demographic analysis:** age and gender can be reviewed while keeping smoking status in context.
+6. **Interactive filtering:** region, smoker status, age group, and BMI category can be selected to update the charge profile.
+
+![Power BI Dashboard](https://raw.githubusercontent.com/Ahmed40052/Healthcare-Insurance-Analysis/main/dashboard/dashboard_screenshots/dashboard.png)
+
+Power BI file: [`dashboard/dashboard.pbix`](https://github.com/Ahmed40052/Healthcare-Insurance-Analysis/blob/main/dashboard/dashboard.pbix)
+
+---
 
 ---
 
@@ -146,34 +167,9 @@ The diagnostic work validates the main findings through additional comparisons a
 - **96.4%** are obese.
 - Smoking has a stronger relationship with charges than age or BMI alone.
 
-![Outlier analysis by BMI](reports/readme_charts/outliers_bmi.png)
+![Outlier analysis by BMI](https://raw.githubusercontent.com/Ahmed40052/Healthcare-Insurance-Analysis/main/reports/readme_charts/outliers_bmi.png)
 
 **Diagnostic conclusion:** The cost pattern is robust. Smoking and obesity are the primary risk combination, age is secondary, and gender is not an independent driver.
-
----
-
-## Presenter 4: Power BI Dashboard
-
-The Power BI dashboard presents the same findings interactively for a business audience. It allows the team to compare regions, smoker status, BMI, age, gender, and charges in one presentation layer.
-
-### Dashboard walkthrough
-
-The dashboard brings the analysis together in one place:
-
-1. **Headline KPIs:** total patients, average charges, and the overall cost level.
-2. **Regional comparison:** Southeast appears as the highest-charge region.
-3. **Smoking analysis:** filters and visuals show the large gap between smokers and non-smokers.
-4. **BMI analysis:** the obese-smoker segment is visible as the highest-risk combination.
-5. **Demographic analysis:** age and gender can be compared without losing the smoking context.
-6. **Interactive filtering:** users can select a region, smoker status, age group, or BMI category and immediately see how the charge profile changes.
-
-This makes the dashboard useful for management discussions: it moves from “what is the average?” to “which patient segment or region should receive attention first?”
-
-<p align="center">
-  <img src="reports/readme_charts/dashboard.png" alt="Power BI dashboard" width="1100">
-</p>
-
-Power BI file: [`dashboard/dashboard.pbix`](dashboard/dashboard.pbix)
 
 ---
 
@@ -223,7 +219,7 @@ Files:
 - Excel workbook: [`reports/Ebtihal/q6_Charges distribution by smoker status/q6_Charges distribution by smoker status.xlsx`](<reports/Ebtihal/q6_Charges distribution by smoker status/q6_Charges distribution by smoker status.xlsx>)
 - Chart: [`reports/readme_charts/charge_distribution.png`](reports/readme_charts/charge_distribution.png)
 
-![Charge distribution by smoker status](reports/readme_charts/charge_distribution.png)
+![Charge distribution by smoker status](https://raw.githubusercontent.com/Ahmed40052/Healthcare-Insurance-Analysis/main/reports/readme_charts/charge_distribution.png)
 
 ### Question 3: BMI categories and smoking interaction
 
@@ -290,9 +286,9 @@ Files:
 - Python smoker comparison chart: [`reports/readme_charts/age_smoker_python.png`](reports/readme_charts/age_smoker_python.png)
 - Excel smoker comparison chart: [`reports/readme_charts/age_smoker_excel.png`](reports/readme_charts/age_smoker_excel.png)
 
-![Charges by age and smoker status](reports/readme_charts/age_smoker_python.png)
+![Charges by age and smoker status](https://raw.githubusercontent.com/Ahmed40052/Healthcare-Insurance-Analysis/main/reports/readme_charts/age_smoker_python.png)
 
-![Excel charges by age and smoker status](reports/readme_charts/age_smoker_excel.png)
+![Excel charges by age and smoker status](https://raw.githubusercontent.com/Ahmed40052/Healthcare-Insurance-Analysis/main/reports/readme_charts/age_smoker_excel.png)
 
 ### Question 8: Gender and smoking
 
@@ -307,7 +303,7 @@ Files:
 - Excel chart: [`reports/readme_charts/gender.png`](reports/readme_charts/gender.png)
 - Python chart: [`reports/readme_charts/gender_python.png`](reports/readme_charts/gender_python.png)
 
-![Python gender analysis](reports/readme_charts/gender_python.png)
+![Python gender analysis](https://raw.githubusercontent.com/Ahmed40052/Healthcare-Insurance-Analysis/main/reports/readme_charts/gender_python.png)
 
 ### Diagnostic analytics
 
@@ -321,7 +317,7 @@ Files:
 - BMI outlier chart: [`reports/readme_charts/outliers_bmi.png`](reports/readme_charts/outliers_bmi.png)
 - Smoking outlier chart: [`reports/readme_charts/outliers_smoker.png`](reports/readme_charts/outliers_smoker.png)
 
-![Outlier boxplot by smoking status](reports/readme_charts/outliers_smoker.png)
+![Outlier boxplot by smoking status](https://raw.githubusercontent.com/Ahmed40052/Healthcare-Insurance-Analysis/main/reports/readme_charts/outliers_smoker.png)
 
 ### Reproducibility note
 
