@@ -8,7 +8,7 @@ SELECT TOP 10 PERCENT
     smoker,
     region,
     charges
-FROM Insurance_clean
+FROM Insurance
 ORDER BY charges DESC;
 ----common characteristics
 SELECT 
@@ -20,7 +20,7 @@ SELECT
 FROM (
     SELECT TOP 10 PERCENT
         age, sex, bmi, children, smoker, charges
-    FROM Insurance_clean
+    FROM Insurance
     ORDER BY charges DESC
 ) AS Top10
 GROUP BY smoker;
